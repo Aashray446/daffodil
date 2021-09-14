@@ -5,6 +5,7 @@ import {
   waitForAsync,
 } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { DaffArticleModule } from '@daffodil/design';
 
@@ -28,6 +29,7 @@ describe('DaffioDocViewerComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
+        RouterTestingModule,
         DaffArticleModule,
         DaffioDocsTableOfContentsModule,
       ],
