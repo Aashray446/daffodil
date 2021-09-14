@@ -8,15 +8,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { DaffLinkSetModule } from '@daffodil/design';
 
-import { DaffioGuidesNavTreeComponent } from './guides-nav-tree.component';
+import { DaffioGuidesNavComponent } from './guides-nav.component';
 
-describe('DaffioGuidesNavTreeComponent', () => {
-  let component: DaffioGuidesNavTreeComponent;
-  let fixture: ComponentFixture<DaffioGuidesNavTreeComponent>;
+describe('DaffioGuidesNavComponent', () => {
+  let component: DaffioGuidesNavComponent;
+  let fixture: ComponentFixture<DaffioGuidesNavComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [DaffioGuidesNavTreeComponent],
+      declarations: [DaffioGuidesNavComponent],
       imports: [
         RouterTestingModule,
         DaffLinkSetModule,
@@ -26,7 +26,7 @@ describe('DaffioGuidesNavTreeComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DaffioGuidesNavTreeComponent);
+    fixture = TestBed.createComponent(DaffioGuidesNavComponent);
     component = fixture.componentInstance;
     const guideWithoutChildren = {
       id: 'id2',
@@ -65,8 +65,8 @@ describe('DaffioGuidesNavTreeComponent', () => {
     expect(anchorTags.length).toEqual(2);
   });
 
-  it('should render a daff-nav-accordion-item for each guide', () => {
-    const daffNavAccordionItem = fixture.debugElement.queryAll(By.css('daff-nav-accordion-item'));
-    expect(daffNavAccordionItem.length).toEqual(4);
+  it('should render a daff-tree-item for each guide', () => {
+    const daffTreeItem = fixture.debugElement.queryAll(By.css('daff-tree-item'));
+    expect(daffTreeItem.length).toEqual(4);
   });
 });

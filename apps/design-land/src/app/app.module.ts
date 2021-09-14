@@ -11,7 +11,7 @@ import {
 
 import { DesignLandAppRoutingModule } from './app-routing.module';
 import { DesignLandAppComponent } from './app.component';
-
+import { DesignLandSidebarContentModule } from './core/sidebar-content/sidebar-content.module';
 
 @NgModule({
   imports: [
@@ -22,6 +22,7 @@ import { DesignLandAppComponent } from './app.component';
     DaffSidebarModule,
     DaffLinkSetModule,
     DaffArticleModule,
+    DesignLandSidebarContentModule,
   ],
   declarations: [
     DesignLandAppComponent,
