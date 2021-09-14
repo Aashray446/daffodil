@@ -35,6 +35,7 @@ export const appRoutes: Routes = [
   { path: 'quantity-field', loadChildren: () => import('./quantity-field/quantity-field.module').then(m => m.DesignLandQuantityFieldModule) },
   { path: 'sidebar', loadChildren: () => import('./sidebar/sidebar.module').then(m => m.DesignLandSidebarModule) },
   { path: 'radio', loadChildren: () => import('./radio/radio.module').then(m => m.DesignLandRadioModule) },
+  { path: 'tree', loadChildren: () => import('./tree/tree.module').then(m => m.DesignLandTreeModule) },
   { path: 'typography', loadChildren: () => import('./typography/typography.module').then(m => m.DesignLandTypographyModule) },
 ];
 

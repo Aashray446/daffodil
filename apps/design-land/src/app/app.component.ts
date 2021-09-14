@@ -2,6 +2,7 @@ import {
   Component,
   Injector,
   ComponentFactoryResolver,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
@@ -18,6 +19,7 @@ import { MEDIA_GALLERY_EXAMPLES } from '@daffodil/design/media-gallery/examples'
 import { MODAL_EXAMPLES } from '@daffodil/design/modal/examples';
 import { QUANTITY_FIELD_EXAMPLES } from '@daffodil/design/quantity-field/examples';
 import { RADIO_EXAMPLES } from '@daffodil/design/radio/examples';
+import { TREE_EXAMPLES } from '@daffodil/design/tree/examples';
 
 import { createCustomElementFromExample } from './core/elements/create-element-from-example';
 
@@ -25,6 +27,7 @@ import { createCustomElementFromExample } from './core/elements/create-element-f
   selector: 'design-land-app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DesignLandAppComponent {
   constructor(
@@ -45,6 +48,7 @@ export class DesignLandAppComponent {
       ...MODAL_EXAMPLES,
       ...QUANTITY_FIELD_EXAMPLES,
       ...LIST_EXAMPLES,
+      ...TREE_EXAMPLES,
     ].map((componentExample) => createCustomElementFromExample(componentExample, injector))
       .map((customElement) => {
         // Register the custom element with the browser.
