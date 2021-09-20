@@ -87,7 +87,7 @@ describe('DaffEmptyCartResolver', () => {
       describe('and cart is not empty', () => {
 
         it('should not redirect to the provided DaffEmptyCartRedirectUrl', () => {
-          stubCart = cartFactory.create({ items: cartItemFactory.create() });
+          stubCart = cartFactory.create({ items: cartItemFactory.createMany(1) });
 
           emptyCartResolver.resolve().subscribe();
           store.dispatch(new DaffCartLoadSuccess(stubCart));

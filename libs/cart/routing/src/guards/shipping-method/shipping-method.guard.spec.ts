@@ -53,7 +53,10 @@ describe('Cart | State | Guards | DaffShippingMethodGuard', () => {
   describe('canActivate', () => {
     it('should allow activation when there is a shipping method', () => {
       const cart: DaffCart = new DaffCartFactory().create({
-        shipping_information: new DaffCartShippingRateFactory().create(),
+        shipping_information: {
+          address_id: 'id',
+          ...new DaffCartShippingRateFactory().create(),
+        },
       });
       store.dispatch(new DaffCartLoadSuccess(cart));
       const expected = cold('(a|)', { a: true });

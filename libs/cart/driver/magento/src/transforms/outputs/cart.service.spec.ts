@@ -97,13 +97,14 @@ describe('Driver | Magento | Cart | Transformer | MagentoCart', () => {
     mockDaffCart = daffCartFactory.create();
     mockMagentoCart = magentoCartFactory.create({
       shipping_addresses: [
-        {
-          selected_shipping_method: {
+        magentoShippingAddressFactory.create({
+          selected_shipping_method: magentoShippingMethodFactory.create({
             amount: {
               value: 100,
+              currency: 'USD',
             },
-          },
-        },
+          }),
+        }),
       ],
     });
     mockShippingAddress = {
