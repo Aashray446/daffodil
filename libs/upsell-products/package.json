@@ -15,7 +15,7 @@
     "directory": "../../dist/upsell-products"
   },
   "scripts": {
-    "build": "ng build upsell-products --prod",
+    "build": "ng build upsell-products --prod && ngcc",
     "lint": "cd ../.. && ng lint upsell-products",
     "lint:fix": "npm run lint -- --fix",
     "test": "ng test upsell-products --watch=false --browsers=ChromeHeadless",

@@ -15,7 +15,7 @@
     "directory": "../../dist/related-products"
   },
   "scripts": {
-    "build": "ng build related-products --prod",
+    "build": "ng build related-products --prod && ngcc",
     "lint": "cd ../.. && ng lint related-products",
     "lint:fix": "npm run lint -- --fix",
     "test": "ng test related-products --watch=false --browsers=ChromeHeadless",

@@ -15,7 +15,7 @@
     "directory": "../../dist/product-composite"
   },
   "scripts": {
-    "build": "ng build product-composite --prod",
+    "build": "ng build product-composite --prod && ngcc",
     "lint": "cd ../.. && ng lint product-composite",
     "lint:fix": "npm run lint -- --fix",
     "test": "ng test product-composite --watch=false --browsers=ChromeHeadless",

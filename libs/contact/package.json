@@ -9,7 +9,7 @@
   "license": "MIT",
   "homepage": "https://github.com/graycoreio/daffodil",
   "scripts": {
-    "build": "ng build contact --prod",
+    "build": "ng build contact --prod && ngcc",
     "lint": "cd ../.. && ng lint contact",
     "lint:fix": "npm run lint -- --fix",
     "test": "ng test contact --watch=false --browsers=ChromeHeadless",
